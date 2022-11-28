@@ -1,6 +1,6 @@
 {
-	"name": "lsp-sample",
-	"description": "A language server example",
+	"name": "lsp-coral-autocompletion",
+	"description": "LSP extension for the Coral language that provides autocompletion for reserved words",
 	"author": "Microsoft Corporation",
 	"license": "MIT",
 	"version": "1.0.0",
