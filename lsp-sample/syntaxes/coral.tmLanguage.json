@@ -1,0 +1,124 @@
+{
+	"name": "CORAL",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#keywordsLanguage"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#parameters"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#functionsLenguage"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#invalid"
+		}
+		
+	],
+	"repository": {
+
+		"keywords": {
+			"patterns": [{
+				"name": "string.regexp",
+				"match": "\\b(if|elseif|else|while|for|or|and|not)\\b"
+			}]
+		},
+		"keywordsLanguage": {
+			"patterns": [{
+				"name": "markup.heading.coral",
+				"match": "\\b(to|output|Get|array|returns|size|with|decimal|places|next|input|Put)\\b"
+			}]
+		},
+		"types": {
+			"patterns": [{
+				"name": "support.variable.coral",
+				"match": "\\b(integer|float|nothing)\\b"
+			}]
+		},
+		"functions": {
+			"patterns": [{
+				"name": "constant.language.coral",
+				"match": "\\b(Function|Main)\\b"
+			}]
+		},
+		"functionsLenguage": {
+			"patterns": [{
+				"name": "variable.language",
+				"match": "\\b(SquareRoot|RaiseToPower|AbsoluteValue|RandomNumber|SeedRandomNumbers)\\b"
+			}]
+		},
+
+		"strings": {
+			"name": "keyword.control.coral",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.coral",
+					"match": "\\\\."
+				}
+			]
+		},
+		"variables": {
+			"patterns": [{
+				"name": "string.quoted.double.coral",
+				"match": "\\b[a-zA-Z][a-zA-Z0-9_]*\\b"
+			}]
+		},
+		"parameters": {
+			"patterns": [{
+				"name": "variable.parameter",
+				"match": "\\b(SquareRoot|RaiseToPower|AbsoluteValue|RandomNumber|SeedRandomNumbers)\\b"
+			}]
+		},
+		"numbers": {
+			"name": "constant.numeric.coral",
+			"patterns": [
+				{
+					"name": "support.class.coral",
+					"match": "\\b[0-9]*[.[0-9]+| ]\\b"
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.percentage.coral",
+			"begin": "\//",
+			"end": "\\n",
+			"patterns": [
+				{
+					"name": "constant.character.escape.coral",
+					"match": "\\\\."
+				}
+			]
+		},
+		"invalid": {
+			"patterns": [{
+				"name": "invalid.illegal",
+				"match": "\\b[0-9_]+[a-zA-Z0-9_]*\\b"
+			}]
+		}	
+
+	},
+	"scopeName": "source.coral"
+}

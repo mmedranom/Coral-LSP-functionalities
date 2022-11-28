@@ -1,0 +1,227 @@
+{
+  // --------------------------------------------------------------------------------
+  // ------- Declaraciones
+  // --------------------------------------------------------------------------------
+
+  "integer":{
+    "prefix": "int",
+    "body": "integer $1",
+    "description": "Define an integer variable."
+  },
+
+  "float":{
+    "prefix": "float",
+    "body": "float $1",
+    "description": "Define a float variable."
+  },
+
+  "Integer Array":{
+    "prefix": "intArr",
+    "body": "integer array(${2:?}) $1",
+    "description": "Define an integer array."
+  },
+
+  "Float Array":{
+    "prefix": "floatArr",
+    "body": "float array(${2:?}) $1",
+    "description": "Define a float array."
+  },
+
+  "Array Size":{
+    "prefix": "setsize",
+    "body": "$1.size = $2",
+    "description": "Sets an array size."
+  },
+
+  // --------------------------------------------------------------------------------
+  // ------- Operaciones
+  // --------------------------------------------------------------------------------
+
+  "asignation":{
+    "prefix": "asign",
+    "body": "$1 = $2",
+    "description": "Value asignation."
+  },
+
+  "equal":{
+    "prefix": "eq",
+    "body": "$1 == $2",
+    "description": "Is equal."
+  },
+
+  "different":{
+    "prefix": "diff",
+    "body": "$1 != $2",
+    "description": "Is equal."
+  },
+
+  "lesser":{
+    "prefix": "less",
+    "body": "$1 < $2",
+    "description": "Is lesser."
+  },
+
+  "lesserEqual":{
+    "prefix": "leq",
+    "body": "$1 <= $2",
+    "description": "Is lesser or equal."
+  },
+
+  "great":{
+    "prefix": "great",
+    "body": "$1 > $2",
+    "description": "Is greater."
+  },
+
+  "greatEqual":{
+    "prefix": "geq",
+    "body": "$1 >= $2",
+    "description": "Is greater or equal."
+  },
+
+  "or":{
+    "prefix": "or",
+    "body": "$1 or $2",
+    "description": "Logic OR."
+  },
+
+  "and":{
+    "prefix": "and",
+    "body": "$1 and $2",
+    "description": "Logic AND."
+  },
+
+  "not":{
+    "prefix": "not",
+    "body": "not $1",
+    "description": "Logic negation."
+  },
+
+  // --------------------------------------------------------------------------------
+  // ------- Estructuras de Control
+  // --------------------------------------------------------------------------------
+
+  "for":{
+    "prefix": "for",
+    "body": ["for ${1:i} = ${2:0}; $1 ${3:< 10}; $1 = $1 ${4:+ 1}",
+             "\t$5"
+            ],
+    "description": "for cycle."
+  },
+
+  "while":{
+    "prefix": "while",
+    "body": [ "while ($1 ${2:< 10})",
+              "\t$3",
+              "\t$1 = $1 ${4:+ 1}"
+            ],
+    "description": "while cycle."
+  },
+
+  "if":{
+    "prefix": "if",
+    "body": [ "if ($1)",
+              "\t$2"
+            ],
+    "description": "if cycle."
+  },
+
+  "ifelse":{
+    "prefix": "ifelse",
+    "body": [ "if ($1)",
+              "\t$2",
+              "else",
+              "\t$3"
+            ],
+    "description": "if cycle with else block."
+  },
+
+  "else":{
+    "prefix": "else",
+    "body": [ "else ($1)",
+              "\t$2"
+            ],
+    "description": "else block for an if cycle."
+  },
+
+  "elseif":{
+    "prefix": "elseif",
+    "body": [ "elseif ($1)",
+              "\t$2"
+            ],
+    "description": "elseif block."
+  },
+
+  // --------------------------------------------------------------------------------
+  // ------- Entrada / Salida
+  // --------------------------------------------------------------------------------
+
+  "Input":{
+    "prefix": "in",
+    "body": "$1 = Get next input",
+    "description": "Get next input."
+  },
+
+  "Output":{
+    "prefix": "out",
+    "body": "Put $1 to output",
+    "description": "Put value to output."
+  },
+
+  "Output with decimal places":{
+    "prefix": "outdec",
+    "body": "Put $1 to output with $2 decimal places",
+    "description": "Put value to output with explicit decimal places."
+  },
+
+  // --------------------------------------------------------------------------------
+  // ------- Funciones
+  // --------------------------------------------------------------------------------
+
+  "AbsoluteValue":{
+    "prefix": "abs",
+    "body": "AbsoluteValue($1)",
+    "description": "Absolute value function."
+  },
+
+  "RaiseToPower":{
+    "prefix": "pow",
+    "body": "RaiseToPower($1,$2)",
+    "description": "Raise to power function."
+  },
+
+  "RandomNumber":{
+    "prefix": "ran",
+    "body": "RandomNumber($1, $2)",
+    "description": "Generates a random number in given interval."
+  },
+
+  "SeedRandomNumbers":{
+    "prefix": "seed",
+    "body": "SeedRandomNumbers($1)",
+    "description": "Sets seed for RandomNumber function."
+  },
+
+  "SquareRoot":{
+    "prefix": "sqrt",
+    "body": "SquareRoot($1)",
+    "description": "Square root function."
+  },
+
+  "Function":{
+    "prefix": "function",
+    "body": [ "Function $1($2) returns ${3:nothing}",
+              "\t$4"
+            ],
+    "description": "Defines a Function."
+  },
+
+  "Main":{
+    "prefix": "main",
+    "body": [ "Function Main() returns nothing",
+              "\t$1"
+            ],
+    "description": "Main function."
+  },
+  
+}

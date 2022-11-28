@@ -9,7 +9,9 @@
 		"url": "https://github.com/Microsoft/vscode-extension-samples"
 	},
 	"publisher": "vscode-samples",
-	"categories": [],
+	"categories": [
+		"Programming Languages",
+		"Snippets"],
 	"keywords": [
 		"multi-root ready"
 	],
@@ -49,7 +51,20 @@
 			"aliases": ["CORAL", "coral"],
 			"extensions": [".coral"],
 			"configuration": "./language-configuration.json"
-		  }]
+		  }],
+		  "grammars": [
+			{
+			  "language": "coral",
+			  "scopeName": "source.coral",
+			  "path": "./syntaxes/coral.tmLanguage.json"
+			}
+		  ],
+		  "snippets": [
+			{
+			  "language": "coral",
+			  "path": "./snippets/snippets.code-snippets"
+			}
+		  ]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
@@ -59,6 +74,7 @@
 		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
 		"test": "sh ./scripts/e2e.sh"
 	},
+	
 	"devDependencies": {
 		"@types/mocha": "^9.1.0",
 		"@types/node": "^16.11.7",
